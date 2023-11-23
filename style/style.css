@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:'Quiet Backyard';
+    src: url(../fonts/Quiet\ Backyard\ Sans.otf);
+}
+
+body {
+    font-family: 'Quiet Backyard';
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    margin: 2em;
+    font-size: 2em;
+    letter-spacing: .3em;
+    color: #f3f4f5;
+}
+#logo {
+    display: flex;
+    width: 50%;
+    margin: 2em auto;
+}
+
+.formBox {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+    margin:  auto;
+    backdrop-filter: blur(10px);
+    background: #f3f4f5;
+    top: -5px;
+}
+
+.label {
+    width: 90%;
+    display: block;
+    margin-block: 2em;
+}
+.label label {
+    position: relative;
+    display: flex;
+    font-size: 1.5em;
+    margin-bottom: .2em;
+    text-align: left;
+    width: 10%;
+    top: 1.2em;
+    color: #083ca4;;
+}
+.label input {
+    position: relative;
+    width: 90%;
+    min-height: 35px;
+    background: transparent;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 15%;
+    border: none;
+    border-bottom: 2px solid #083ca4;;
+    color: #083ca4;
+}
+.forget {
+    display: flex;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: .1em;
+    justify-content: right;
+    color: #083ca4;
+}
+button {
+    width: 80%;
+    border-radius: 35px;
+    min-height: 35px;
+    margin-top: 2em;
+    border:none;
+    font-size: 1em;
+    color: #f3f4f5;
+    background-color: #083ca4;
+    padding: 10px;
+    cursor: pointer;
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    border-bottom: 2px solid #083ca4;
+} 
+
+
+@media(min-width: 600px) {
+
+    #logo {
+        width: 20%;
+        margin: 1.5em auto;
+    }
+    .title {
+        font-size: 1.5em;
+        margin: .5em;
+    }
+    .formBox {
+        width: 100%;
+        min-height: 470px;
+        top: -90px;
+    }
+    .label {
+        width: 30%;
+        margin: 1em auto;
+    }
+    button {
+        display: flex;
+        width: 30%;
+        margin: 1.5em auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .forget { 
+        width:78%;
+        margin-block: 2em;
+    }
+
+}
