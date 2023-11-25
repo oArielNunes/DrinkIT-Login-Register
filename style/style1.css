@@ -19,6 +19,17 @@ body {
     z-index: 0;
 
 }
+.error {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    text-align: left;
+    display: none;
+    font-size: 1.1em;
+}
+.exSpan{
+    margin-top: 20px;
+}
 
 .title {
     text-align: center;
@@ -50,14 +61,7 @@ body {
     z-index: 2;
     top: -15px;
 }
-.forget {
-    display: flex;
-    text-decoration: none;
-    font-size: 1em;
-    letter-spacing: .1em;
-    justify-content: right;
-    color: #083ca4;
-}
+
 .label {
     width: 90%;
     display: block;
@@ -74,6 +78,47 @@ body {
     color: #083ca4;
 
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: .8em;
+  font-family:'Quiet Backyard';
+  
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: .8em;
+  font-family:'Quiet Backyard';
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: .8em;
+  font-family:'Quiet Backyard';
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-size: .8em;
+  font-family:'Quiet Backyard';
+}
+.exercise{
+    font-size: 1em;
+    position: relative;
+    width: 90%;
+    left: 10%;
+    font-family:'Quiet Backyard';
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #083ca4;
+    outline: none;
+    border-radius: 1px;
+    appearance: none;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    color: grey;
+}
+.exercise:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
 .label input {
     position: relative;
     width: 90%;
@@ -83,7 +128,7 @@ body {
     font-size: 1.5em;
     margin-left: 15%;
     border: none;
-    border-bottom: 2px solid #083ca4;;
+    border-bottom: 2px solid #083ca4;
     color: #083ca4;
 }
 
@@ -93,6 +138,7 @@ body {
     align-items: center;
     font-size: 1em;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 .button {
     width: 200px;
@@ -124,19 +170,19 @@ textarea:focus, input:focus, select:focus {
 
 @media(min-width: 600px) {
 
-    body {
-        background-position: center;
-        background-repeat: repeat;
-    }
-    #hidden{
-        display: none;
-    }
     #logo {
         position: absolute;
         width: 10%;
         left: 0;
         right: 0;
+        bottom: -60px;
         z-index: 5;
+    }
+    .error{
+        font-size: 1em;
+    }
+    #hidden{
+        display: none;
     }
     .title {
         font-size: 1.5em;
@@ -145,20 +191,27 @@ textarea:focus, input:focus, select:focus {
     .formBox {
         position: absolute;
         width: 60%;
-        height: 50%;
+        height: 85%;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         border-radius: 20px;
-        
+        min-height: max-content;
     }
     .label {
-        width: 30%;
-        margin: 1em auto;
+        position: relative;
+        width: 50%;
+        margin: .1em auto;
         justify-content: center;
         align-items: center;
     }
+
+    .exercise {
+        left: 0;
+        top: .8em;
+    }
+
     button {
         display: flex;
         width: 30%;
@@ -182,11 +235,12 @@ textarea:focus, input:focus, select:focus {
         position: relative;
         margin-bottom: 10px;
         letter-spacing: 2px;
-        top: 1.8em
+        top: -.3em
     }
     .button {
         position: relative;
-        top: 2.5em;
+        top: .5em;
     }   
+
 
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="./style/style1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRINKIT - HOME / LOGIN </title>
+</head>
+
+<body>
+    <h1 id="logo"><img src="./images/drink-it-logo.png" alt="logotipo" width="100%" height="5%"></h1>
+
+
+    <h2 class="title">SIGN UP</h2>
+    <svg id="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,128L48,112C96,96,192,64,288,85.3C384,107,480,181,576,192C672,203,768,149,864,138.7C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <div class="errase">
+        <div class="formBox">
+            <form id='form'>
+                <div class="label">
+                    <label for="nameInput"><ion-icon name="person-circle"></ion-icon></label>
+                    <input type="text" name="name" id="nameInput" autocomplete="name" placeholder="Name" class="required" oninput="validateName()">
+                    <span class="error"> Name must have 3 characters at least</span>
+                </div>
+                <div class="label">
+                    <label for="emailInput"><ion-icon name="mail"></ion-icon></label>
+                    <input type="email" name="email" id="emailInput" autocomplete="email" placeholder="E-mail" class="required" oninput="validateEmail()">
+                    <span class="error">E-mail must be valid</span>
+                </div>
+                <div class="label">
+                    <label for="weightlInput"><ion-icon name="scale"></ion-icon></label>
+                    <input type="number" max="250" min="35" name="weight" id="weightlInput" placeholder="Weight" class="required" oninput=" validateWeight()">
+                    <span class="error">Weight must be between 35KG and 250KG</span>
+                </div>
+                <div class="label">
+                    <label for="exerciseInput"><ion-icon name="accessibility"></ion-icon></label>
+                    <select name="exercise" id="exerciseInput" class='exercise' class="required" oninput="validateExercise()">
+                        <option value="">Do any exercise daily?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <span class="error exSpan">Choose one</span>
+                </div>
+                <div class="label">
+                    <label for="passwordInput"><ion-icon name="link"></ion-icon></label>
+                    <input type="password" id="passwordInput" placeholder="Password" class="required" oninput="validatePassword()">
+                    <span class="error">Password must have 8 characters at least</span>
+                </div>
+                <div class="label">
+                    <label for="confirmPasswordInput"><ion-icon name="checkmark-done"></ion-icon></label>
+                    <input type="password" id="confirmPasswordInput" placeholder="Confirm Password" class="required" oninput="checkPassword()">
+                    <span class="error">Passwords must be the same</span>
+                </div>    
+                <button type="submit" class="button">SIGN UP</button>
+                    <p class="or">have any account?</p>
+                <a class="button btn" href="./index.html">SIGN IN</a>
+            </form>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="script/script1.js" defer></script>
+</html>
